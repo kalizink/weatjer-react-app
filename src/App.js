@@ -1,5 +1,10 @@
 import "./App.css";
+import Footer from "./Footer.js";
 
 export default function App() {
-	return <div> it worked </div>;
+	return (
+		<div className="App">
+<Footer />
+		</div>
+	);
 }
