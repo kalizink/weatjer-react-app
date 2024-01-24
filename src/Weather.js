@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import { Audio } from "react-loader-spinner";
 
 export default function Weather(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
@@ -76,6 +77,16 @@ export default function Weather(props) {
 		let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
 		axios.get(apiUrl).then(handleResponse);
 
-		return "Loading...";
+		return (
+			<Audio
+				height="80"
+				width="80"
+				radius="9"
+				color="green"
+				ariaLabel="loading"
+				wrapperStyle
+				wrapperClass
+			/>
+		);
 	}
 }
