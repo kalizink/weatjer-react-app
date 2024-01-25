@@ -18,7 +18,7 @@ export default function FormattedDate(props) {
 
 	let minutes = props.date.getMinutes();
 	if (minutes < 10) {
-		minutes = `0${hours}`;
+		minutes = `0${minutes}`;
 	}
 
 	return (
