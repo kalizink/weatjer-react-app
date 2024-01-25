@@ -3,6 +3,7 @@ import "./Weather.css";
 import axios from "axios";
 import { Audio } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function Weather(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
@@ -62,6 +63,7 @@ export default function Weather(props) {
 					</div>
 				</form>
 				<WeatherInfo data={weatherData} />
+				<WeatherForecast />
 			</div>
 		);
 	} else {
