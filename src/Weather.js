@@ -15,7 +15,7 @@ export default function Weather(props) {
 			wind: response.data.wind.speed,
 			city: response.data.city,
 			humidity: response.data.temperature.humidity,
-			icon: `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png`,
+			icon: response.data.condition.icon,
 			description: response.data.condition.description,
 			date: new Date(response.data.time * 1000),
 			ready: true,
@@ -72,7 +72,7 @@ export default function Weather(props) {
 				height="80"
 				width="80"
 				radius="9"
-				color="green"
+				color="pink"
 				ariaLabel="loading"
 				wrapperStyle
 				wrapperClass

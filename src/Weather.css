@@ -20,12 +20,13 @@
 	font-size: 16px;
 	font-weight: 100;
 	list-style: none;
+	line-height: 19px;
 }
-.Weather img {
-	height: 64px;
-	width: 64px;
-	vertical-align: top;
+.Weather canvas {
+	margin-top: 5px;
+	margin-right: 5px;
 	display: inline-block;
+	margin-bottom: 10px auto;
 }
 .Weather .temperature {
 	font-weight: bold;
@@ -36,9 +37,7 @@
 	font-weight: 400;
 	margin-left: 10px;
 }
-.Weather canvas {
-	margin-bottom: 10px auto;
-}
+
 .Weather .unit {
 	color: rgb(33, 33, 33);
 	font-size: 16px;
